@@ -70,15 +70,14 @@ for quizNum in range (10):
 
     #    Escreve a questão e as opçoes no arquivo de pergunta:
     quizArquivo.write('%s. Qual a capital de %s?\n' % (quizNum + 1, estados [questaoNum]))    
-    print('%s. Qual a capital de %s?\n' % (quizNum + 1, estados [questaoNum]))        
+    
     for i in range (4):
         quizArquivo.write (' %s. %s\n' % ('ABCD'[i], respostaOpcoes[i]))
-        print(' %s. %s\n' % ('ABCD'[i], respostaOpcoes[i]))
+    
         quizArquivo.write ('\n')
         
     #   Escreve a resposta certa no arquivo de gabarito
     gabaritoChaveArquivo.write('%s. %s\n' % (quizNum + 1, 'ABCD'[respostaOpcoes.index(respostaCerta)]))
-    print('A resposta da questão nº %s é: %s\n' % (quizNum + 1, 'ABCD'[respostaOpcoes.index(respostaCerta)] + ' - ' + respostaCerta))
-    print ('------------------------------------------------------------------------')
+    
     quizArquivo.close()
     gabaritoChaveArquivo.close()
